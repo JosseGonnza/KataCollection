@@ -8,7 +8,7 @@ public class FizzBuzzTest
 
     public FizzBuzzTest()
     {
-        kata = new FizzBuzz(); ;
+        kata = new FizzBuzz();
     }
 
     [Fact(DisplayName = "Should return 1 to 1")]
@@ -22,7 +22,6 @@ public class FizzBuzzTest
     [Fact(DisplayName = "Should return Fizz to 3")]
     public void Should_return_Fizz_to_3()
     {
-
         var result = kata.Convert(3);
 
         result.Should().Be("Fizz");
@@ -35,7 +34,6 @@ public class FizzBuzzTest
     [InlineData(12, "Fizz")]
     public void Should_return_Fizz_to_multiples_of_3(int number, string expected)
     {
-
         var result = kata.Convert(number);
 
         result.Should().Be(expected);
@@ -48,7 +46,6 @@ public class FizzBuzzTest
     [InlineData(25, "Buzz")]
     public void Should_return_Buzz_to_multiples_of_5(int number, string expected)
     {
-
         var result = kata.Convert(number);
 
         result.Should().Be(expected);
@@ -61,7 +58,6 @@ public class FizzBuzzTest
     [InlineData(60, "FizzBuzz")]
     public void Should_return_FizzBuzz_to_multiples_of_15(int number, string expected)
     {
-
         var result = kata.Convert(number);
 
         result.Should().Be(expected);

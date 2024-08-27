@@ -1,0 +1,6 @@
+@KataCollection_HostAddress = http://localhost:5274
+
+GET {{KataCollection_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
