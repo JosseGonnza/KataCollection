@@ -9,6 +9,7 @@ He aquí mi pequeño gran calvario! Un monstruito de repo al que iré alimentand
 Actualmente, este repositorio incluye las siguientes katas:
 
 1. **FizzBuzz**: Es un ejercicio de programación clásico que se utiliza para practicar habilidades básicas de codificación, como el uso de bucles y condiciones. El problema consiste en imprimir números del 1 al 100 con unas determinadas reglas.
+2. **LeapYear**: Un ejercicio que involucra la implementación de un algoritmo para determinar si un año es bisiesto.
 
 ### Detalles de cada Kata
 
@@ -19,7 +20,14 @@ Actualmente, este repositorio incluye las siguientes katas:
 	- Desarrollar habilidades en el uso de condicionales (if, else if, else) para manejar múltiples casos.
 	- Familiarizarse con operadores aritméticos, como el módulo (%) para determinar la divisibilidad.
 	- Mejorar la lógica de programación y la claridad del código, asegurando que las condiciones se evalúan en el orden correcto.
+___
 
+#### 2. LeapYear (TDD)
+- Objetivos:
+	- Practicar la lógica condicional para evaluar múltiples criterios.
+	- Entender las reglas de los años bisiestos.
+	- Aplicar operadores aritméticos para realizar cálculos sobre el año.
+	- Mejorar la eficiencia del código al evitar cálculos innecesarios.
 
 ## Requisitos Previos
 
