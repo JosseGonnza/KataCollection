@@ -4,12 +4,17 @@ namespace FizzBuzzKata;
 
 public class FizzBuzzTest
 {
+    private readonly FizzBuzz kata;
+
+    public FizzBuzzTest()
+    {
+        kata = new FizzBuzz(); ;
+    }
+
     [Fact(DisplayName = "Should return 1 to 1")]
     public void Should_return_1_to_1()
     {
-        var fizzbuzz = new FizzBuzz();
-
-        var result = fizzbuzz.Convert(1);
+        var result = kata.Convert(1);
 
         result.Should().Be("1");
     }
@@ -17,9 +22,8 @@ public class FizzBuzzTest
     [Fact(DisplayName = "Should return Fizz to 3")]
     public void Should_return_Fizz_to_3()
     {
-        var fizzbuzz = new FizzBuzz();
 
-        var result = fizzbuzz.Convert(3);
+        var result = kata.Convert(3);
 
         result.Should().Be("Fizz");
     }
@@ -31,9 +35,8 @@ public class FizzBuzzTest
     [InlineData(12, "Fizz")]
     public void Should_return_Fizz_to_multiples_of_3(int number, string expected)
     {
-        var fizzbuzz = new FizzBuzz();
 
-        var result = fizzbuzz.Convert(number);
+        var result = kata.Convert(number);
 
         result.Should().Be(expected);
     }
@@ -45,9 +48,8 @@ public class FizzBuzzTest
     [InlineData(25, "Buzz")]
     public void Should_return_Buzz_to_multiples_of_5(int number, string expected)
     {
-        var fizzbuzz = new FizzBuzz();
 
-        var result = fizzbuzz.Convert(number);
+        var result = kata.Convert(number);
 
         result.Should().Be(expected);
     }
@@ -59,30 +61,9 @@ public class FizzBuzzTest
     [InlineData(60, "FizzBuzz")]
     public void Should_return_FizzBuzz_to_multiples_of_15(int number, string expected)
     {
-        var fizzbuzz = new FizzBuzz();
 
-        var result = fizzbuzz.Convert(number);
+        var result = kata.Convert(number);
 
         result.Should().Be(expected);
-    }
-}
-
-public class FizzBuzz
-{
-    public string Convert(int number)
-    {
-        if (number % 15 == 0)
-        {
-            return "FizzBuzz";
-        }
-        if (number % 3 == 0)
-        {
-            return "Fizz";
-        }
-        if (number % 5 == 0)
-        {
-            return "Buzz";
-        }
-        return number.ToString();
     }
 }
