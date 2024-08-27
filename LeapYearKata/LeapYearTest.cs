@@ -2,7 +2,7 @@ using FluentAssertions;
 
 namespace LeapYearKata;
 
-public class LeapYearTest
+public partial class LeapYearTest
 {
     [Fact(DisplayName = "Should return true when year is 4")]
     public void Should_return_true_when_year_is_4()
@@ -54,21 +54,5 @@ public class LeapYearTest
         var result = leapYear.IsLeapYear(year);
 
         result.Should().BeFalse();
-    }
-
-    public class LeapYear
-    {
-        public bool IsLeapYear(int year)
-        {
-            if (year % 100 == 0 && year % 400 != 0)
-            {
-                return false;
-            }
-            else if (year % 4 != 0)
-            {
-                return false;
-            }
-            return true;
-        }
     }
 }
