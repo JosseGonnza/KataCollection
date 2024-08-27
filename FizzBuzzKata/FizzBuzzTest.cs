@@ -23,13 +23,27 @@ public class FizzBuzzTest
 
         result.Should().Be("Fizz");
     }
+
+    [Theory(DisplayName = "Should return Fizz to multiples of 3")]
+    [InlineData(3, "Fizz")]
+    [InlineData(6, "Fizz")]
+    [InlineData(9, "Fizz")]
+    [InlineData(12, "Fizz")]
+    public void Should_return_Fizz_to_multiples_of_3(int number, string expected)
+    {
+        var fizzbuzz = new FizzBuzz();
+
+        var result = fizzbuzz.Convert(number);
+
+        result.Should().Be(expected);
+    }
 }
 
 public class FizzBuzz
 {
     public string Convert(int number)
     {
-        if (number == 3)
+        if (number % 3 == 0)
         {
             return "Fizz";
         }
