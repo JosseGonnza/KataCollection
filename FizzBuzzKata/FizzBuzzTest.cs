@@ -37,6 +37,20 @@ public class FizzBuzzTest
 
         result.Should().Be(expected);
     }
+
+    [Theory(DisplayName = "Should return Buzz to multiples of 5")]
+    [InlineData(5, "Buzz")]
+    [InlineData(10, "Buzz")]
+    [InlineData(20, "Buzz")]
+    [InlineData(25, "Buzz")]
+    public void Should_return_Buzz_to_multiples_of_5(int number, string expected)
+    {
+        var fizzbuzz = new FizzBuzz();
+
+        var result = fizzbuzz.Convert(number);
+
+        result.Should().Be(expected);
+    }
 }
 
 public class FizzBuzz
@@ -46,6 +60,10 @@ public class FizzBuzz
         if (number % 3 == 0)
         {
             return "Fizz";
+        }
+        if (number % 5 == 0)
+        {
+            return "Buzz";
         }
         return number.ToString();
     }
