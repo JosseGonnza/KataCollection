@@ -28,6 +28,20 @@ public class LeapYearTest
         result.Should().BeFalse();
     }
 
+    [Theory(DisplayName = "Should return true when year is divisible by 400")]
+    [InlineData(400)]
+    [InlineData(800)]
+    [InlineData(1200)]
+    [InlineData(1600)]
+    public void Should_return_true_when_year_is_divisible_by_400(int year)
+    {
+        var leapYear = new LeapYear();
+
+        var result = leapYear.IsLeapYear(year);
+
+        result.Should().BeTrue();
+    }
+
     public class LeapYear
     {
         public bool IsLeapYear(int year)
