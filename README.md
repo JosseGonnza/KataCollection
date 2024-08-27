@@ -11,7 +11,7 @@ Actualmente, este repositorio incluye las siguientes katas:
 1. **FizzBuzz**: Es un ejercicio de programación clásico que se utiliza para practicar habilidades básicas de codificación, como el uso de bucles y condiciones. El problema consiste en imprimir números del 1 al 100 con unas determinadas reglas.
 2. **LeapYear**: Un ejercicio que involucra la implementación de un algoritmo para determinar si un año es bisiesto.
 
-### Detalles de cada Kata
+## Detalles de cada Kata
 
 #### 1. FizzBuzz (TDD)
 

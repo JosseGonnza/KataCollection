@@ -1,9 +1,7 @@
 ﻿namespace LeapYearKata;
 
-public partial class LeapYearTest
+public class LeapYear
 {
-    public class LeapYear
-    {
         public bool IsLeapYear(int year)
         {
             return IsDivisible(year, 4) && !(IsDivisible(year, 100) && IsNotDivisible(year, 400));
@@ -18,5 +16,4 @@ public partial class LeapYearTest
         {
             return year % number == 0;
         }
-    }
 }
