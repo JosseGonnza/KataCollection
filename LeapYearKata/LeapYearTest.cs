@@ -13,4 +13,12 @@ public class LeapYearTest
 
         result.Should().BeTrue();
     }
+
+    public class LeapYear
+    {
+        public bool IsLeapYear(int year)
+        {
+            return true;
+        }
+    }
 }
