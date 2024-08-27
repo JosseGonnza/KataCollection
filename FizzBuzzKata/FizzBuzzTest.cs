@@ -1,3 +1,5 @@
+using FluentAssertions;
+
 namespace FizzBuzzKata;
 
 public class FizzBuzzTest
@@ -10,5 +12,13 @@ public class FizzBuzzTest
         var result = fizzbuzz.Convert(1);
 
         result.Should().Be("1");
+    }
+}
+
+public class FizzBuzz
+{
+    public string Convert(int number)
+    {
+        return number.ToString();
     }
 }
