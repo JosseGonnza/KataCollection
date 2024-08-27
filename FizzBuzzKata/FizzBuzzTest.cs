@@ -51,12 +51,30 @@ public class FizzBuzzTest
 
         result.Should().Be(expected);
     }
+
+    [Theory(DisplayName = "Should return FizzBuzz to multiples of 15")]
+    [InlineData(15, "FizzBuzz")]
+    [InlineData(30, "FizzBuzz")]
+    [InlineData(45, "FizzBuzz")]
+    [InlineData(60, "FizzBuzz")]
+    public void Should_return_FizzBuzz_to_multiples_of_15(int number, string expected)
+    {
+        var fizzbuzz = new FizzBuzz();
+
+        var result = fizzbuzz.Convert(number);
+
+        result.Should().Be(expected);
+    }
 }
 
 public class FizzBuzz
 {
     public string Convert(int number)
     {
+        if (number % 15 == 0)
+        {
+            return "FizzBuzz";
+        }
         if (number % 3 == 0)
         {
             return "Fizz";
