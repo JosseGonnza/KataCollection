@@ -2,14 +2,20 @@ using FluentAssertions;
 
 namespace LeapYearKata;
 
-public partial class LeapYearTest
+public class LeapYearTest
 {
+    private readonly LeapYear kata;
+
+    public LeapYearTest()
+    {
+        kata = new LeapYear();
+    }
+
     [Fact(DisplayName = "Should return true when year is 4")]
     public void Should_return_true_when_year_is_4()
     {
-        var leapYear = new LeapYear();
 
-        var result = leapYear.IsLeapYear(4);
+        var result = kata.IsLeapYear(4);
 
         result.Should().BeTrue();
     }
@@ -21,9 +27,8 @@ public partial class LeapYearTest
     [InlineData(2023)]
     public void Should_return_false_when_year_is_not_multiple_of_4(int year)
     {
-        var leapYear = new LeapYear();
 
-        var result = leapYear.IsLeapYear(year);
+        var result = kata.IsLeapYear(year);
 
         result.Should().BeFalse();
     }
@@ -35,9 +40,8 @@ public partial class LeapYearTest
     [InlineData(1600)]
     public void Should_return_true_when_year_is_divisible_by_400(int year)
     {
-        var leapYear = new LeapYear();
 
-        var result = leapYear.IsLeapYear(year);
+        var result = kata.IsLeapYear(year);
 
         result.Should().BeTrue();
     }
@@ -49,9 +53,8 @@ public partial class LeapYearTest
     [InlineData(1800)]
     public void Should_return_false_when_year_is_divisible_by_100_but_not_by_400(int year)
     {
-        var leapYear = new LeapYear();
 
-        var result = leapYear.IsLeapYear(year);
+        var result = kata.IsLeapYear(year);
 
         result.Should().BeFalse();
     }

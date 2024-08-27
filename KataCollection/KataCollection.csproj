@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\FizzBuzzKata\FizzBuzzKata.csproj" />
+    <ProjectReference Include="..\LeapYearKata\LeapYearKata.csproj" />
   </ItemGroup>
 
 </Project>
