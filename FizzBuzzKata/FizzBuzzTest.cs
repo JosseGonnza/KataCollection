@@ -2,9 +2,13 @@ namespace FizzBuzzKata;
 
 public class FizzBuzzTest
 {
-    [Fact]
-    public void Test1()
+    [Fact(DisplayName = "Should return 1 to 1")]
+    public void Should_return_1_to_1()
     {
+        var fizzbuzz = new FizzBuzz();
 
+        var result = fizzbuzz.Convert(1);
+
+        result.Should().Be("1");
     }
 }
