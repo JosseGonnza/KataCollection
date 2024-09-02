@@ -10,6 +10,7 @@ Actualmente, este repositorio incluye las siguientes katas:
 
 1. **FizzBuzz**: Es un ejercicio de programación clásico que se utiliza para practicar habilidades básicas de codificación, como el uso de bucles y condiciones. El problema consiste en imprimir números del 1 al 100 con unas determinadas reglas.
 2. **LeapYear**: Un ejercicio que involucra la implementación de un algoritmo para determinar si un año es bisiesto.
+3. **PasswordValidation**: Una función sencilla de validación de contraseñas que verifica si una contraseña cumple con ciertos requisitos de seguridad.
 
 ## Detalles de cada Kata
 
@@ -28,6 +29,17 @@ ___
 	- Entender las reglas de los años bisiestos.
 	- Aplicar operadores aritméticos para realizar cálculos sobre el año.
 	- Mejorar la eficiencia del código al evitar cálculos innecesarios.
+___
+
+#### 3. Password Validation (TDD)
+- Objetivos:
+	- Implementar una función para validar contraseñas según las reglas comunes de seguridad.
+	- Requisitos de la contraseña:
+      - Debe contener al menos una letra mayúscula.
+      - Debe contener al menos una letra minúscula.
+      - Debe contener al menos un número.
+      - Debe tener al menos 8 caracteres de longitud.
+	- Practicar el uso de expresiones regulares y validaciones condicionales.
 
 ## Requisitos Previos
 
