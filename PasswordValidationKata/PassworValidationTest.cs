@@ -1,4 +1,5 @@
 using FluentAssertions;
+using FluentAssertions.Primitives;
 
 namespace PasswordValidationKata;
 
@@ -15,8 +16,18 @@ public class PassworValidationTest
     [Fact(DisplayName = "Password contain one uppercase char")]
     public void Should_contain_at_least_one_uppercase_character()
     {
-        var password = "abc123___";
+        ShouldBeFalse("abc123___");
+    }
 
-        Password.Validator(password).Should().BeFalse();
+
+    [Fact(DisplayName = "Password contain one lowercase char")]
+    public void Should_contain_at_least_one_lowercase_character()
+    {
+        ShouldBeFalse("ABC123___");
+    }
+  
+    private static AndConstraint<BooleanAssertions> ShouldBeFalse(string password)
+    {
+        return Password.Validator(password).Should().BeFalse();
     }
 }
