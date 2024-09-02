@@ -14,3 +14,11 @@ public class PassworValidationTest
         result.Should().BeTrue();
     }
 }
+
+public class Password
+{
+    public static bool Validator(string password)
+    {
+        return true;
+    }
+}
