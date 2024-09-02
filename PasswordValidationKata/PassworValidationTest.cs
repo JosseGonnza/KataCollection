@@ -9,16 +9,14 @@ public class PassworValidationTest
     {
         var password = "ABCabc123___";
 
-        var result = Password.Validator(password);
-        
-        result.Should().BeTrue();
+        Password.Validator(password).Should().BeTrue();
     }
-}
-
-public class Password
-{
-    public static bool Validator(string password)
+    
+    [Fact(DisplayName = "Password contain one uppercase char")]
+    public void Should_contain_at_least_one_uppercase_character()
     {
-        return true;
+        var password = "abc123___";
+
+        Password.Validator(password).Should().BeFalse();
     }
 }
