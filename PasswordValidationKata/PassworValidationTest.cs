@@ -35,6 +35,12 @@ public class PassworValidationTest
         ShouldBeFalse("ABCabc123");
     }
 
+    [Fact(DisplayName = "Password contain 8 characters")]
+    public void Should_contain_at_least_8_characters()
+    {
+        ShouldBeFalse("Aa1_");
+    }
+
     private static AndConstraint<BooleanAssertions> ShouldBeFalse(string password)
     {
         return Password.Validator(password).Should().BeFalse();
