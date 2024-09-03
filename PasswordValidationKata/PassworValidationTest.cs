@@ -29,6 +29,12 @@ public class PassworValidationTest
         ShouldBeFalse("ABCabc___");
     }
 
+    [Fact(DisplayName = "Password contain one underscore")]
+    public void Should_contain_at_least_one_underscore()
+    {
+        ShouldBeFalse("ABCabc123");
+    }
+
     private static AndConstraint<BooleanAssertions> ShouldBeFalse(string password)
     {
         return Password.Validator(password).Should().BeFalse();

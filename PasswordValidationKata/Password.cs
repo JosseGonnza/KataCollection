@@ -8,7 +8,8 @@ public class Password
     {
         if (Regex.IsMatch(password, ".*[A-Z].*") 
             && Regex.IsMatch(password, ".*[a-z].*")
-            && Regex.IsMatch(password, ".*\\d.*"))
+            && Regex.IsMatch(password, ".*\\d.*")
+            && Regex.IsMatch(password, ".*[_].*"))
         {
             return true;
         }
