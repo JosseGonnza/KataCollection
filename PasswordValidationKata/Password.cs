@@ -6,7 +6,7 @@ public class Password
 {
     public static bool Validator(string password)
     {
-        if (Regex.IsMatch(password, "^[A-Z]*$"))
+        if (Regex.IsMatch(password, ".*[A-Z].*") && Regex.IsMatch(password, ".*[a-z].*"))
         {
             return true;
         }
