@@ -23,6 +23,12 @@ public class PassworValidationTest
         ShouldBeFalse("ABC123___");
     }
 
+    [Fact(DisplayName = "Password contain one number")]
+    public void Should_contain_at_least_one_number()
+    {
+        ShouldBeFalse("ABCabc___");
+    }
+
     private static AndConstraint<BooleanAssertions> ShouldBeFalse(string password)
     {
         return Password.Validator(password).Should().BeFalse();
